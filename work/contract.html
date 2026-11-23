@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工程管理系統｜Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261124043250">
+</head>
+<body class="case-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Tina Liu</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#about">關於我</a>
+      <a href="../index.html#medreminder">用藥提醒App</a>
+      <details class="menu">
+        <summary>其他作品</summary>
+        <div class="menu-panel">
+          <a href="warehouse.html">出入庫管理系統</a>
+          <a href="contract.html">工程管理系統</a>
+          <a href="customer-journey.html">顧客消費歷程管理平台</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="#contact">與我聯繫</a>
+      <button class="nav-toggle" aria-label="開啟選單" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 專案介紹 -->
+  <section class="project" id="overview">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← 其他作品</a>
+      <div class="project-grid">
+        <div class="project-text">
+          <h1 class="project-title"><span>從洽案到監控串成一條線的</span>工程管理系統</h1>
+          <p class="project-lead">給建設公司使用的整合式工程管理平台，把一個工程從洽案、開案、請購與採購、合約、現場品管、文件簽核到監控，都串在同一個系統裡。辦公室用 Web 管理與簽核，工地人員用 App 回報現場進度，主管則透過儀表板掌握整體狀況。</p>
+          <dl class="project-meta"><div><dt>角色</dt><dd>UI/UX 設計師（提案階段獨立設計）</dd></div><div><dt>團隊</dt><dd>1 業務經理、1 UI/UX</dd></div><div><dt>使用者</dt><dd>專案經理、工地人員、採購、主管</dd></div><div><dt>時間</dt><dd>2025.04 — 06（提案）</dd></div></dl>
+        </div>
+        <figure class="project-cover"><img class="shot" src="../assets/img/em-dashboard.png" alt="監控儀表板：甘特圖、工程總費用與待簽核表單" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 系統流程 -->
+  <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="scenes-title">系統流程</h2>
+      <p class="scenes-lead">專案資料從洽案一路往下帶，不必在每個階段重填。</p>
+<figure class="sysflow" aria-label="系統流程：前期、發包、執行三個階段，文件簽核與監控從開案後貫穿全程，共七個模組">
+  <div class="sysflow-track">
+    <section class="sysflow-phase is-pre" aria-label="前期階段">
+      <p class="sysflow-phase-name"><b>前期</b>承接案件</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="1"><span class="sysflow-num">01</span><h3>洽案</h3><p>建立洽案、撰寫會議紀錄</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span><span class="sysflow-tag is-app">App</span></span></li>
+        <li class="sysflow-node" value="2"><span class="sysflow-num">02</span><h3>開案</h3><p>帶入代號與會議紀錄、建立名冊</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+    <section class="sysflow-phase is-buy" aria-label="發包階段">
+      <p class="sysflow-phase-name"><b>發包</b>採購與簽約</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="3"><span class="sysflow-num">03</span><h3>請購與採購</h3><p>請購、詢價、比價、決標</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+        <li class="sysflow-node" value="4"><span class="sysflow-num">04</span><h3>合約</h3><p>帶入廠商資料、步驟式建立</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+    <section class="sysflow-phase is-run" aria-label="執行階段">
+      <p class="sysflow-phase-name"><b>執行</b>施工與品管</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="5"><span class="sysflow-num">05</span><h3>現場品管</h3><p>拍照回報、自主檢查表</p><span class="sysflow-tags"><span class="sysflow-tag is-app">App</span><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+  </div>
+  <div class="sysflow-bands">
+    <section class="sysflow-phase sysflow-band is-doc" aria-label="文件簽核，從開案後貫穿全程">
+      <p class="sysflow-phase-name"><b>文件簽核</b>開案後全程</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="6"><span class="sysflow-num">06</span><h3>文件簽核</h3><div class="sysflow-feat"><strong>開案後</strong><ul><li>建照申請</li><li>政府文件</li><li>圖說送審</li></ul></div><div class="sysflow-feat"><strong>施工中與完工</strong><ul><li>消防法規</li></ul></div><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span><span class="sysflow-tag is-app">App</span></span></li>
+      </ol>
+    </section>
+    <section class="sysflow-phase sysflow-band is-mon" aria-label="監控，從開案後貫穿全程">
+      <p class="sysflow-phase-name"><b>監控</b>開案後全程</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="7"><span class="sysflow-num">07</span><h3>監控</h3><div class="sysflow-feat"><strong>進度監控<span class="sysflow-who">辦公室</span></strong><ul><li>甘特圖</li><li>工程費用</li><li>待簽核表單</li></ul></div><div class="sysflow-feat"><strong>工地現場監控<span class="sysflow-who">工地</span></strong><ul><li>即時影像</li><li>出勤人力</li><li>機具與材料</li></ul></div><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+  </div>
+</figure>
+      <div class="proto-cta">
+        <button type="button" class="btn btn-primary" data-proto-open="proto-em">查看流程</button>
+      </div>
+      <script type="application/json" id="proto-em">{"title": "工程管理系統", "modules": ["洽案", "開案", "請購與採購", "合約", "現場品管", "文件簽核", "監控"], "screens": [{"m": 0, "src": "../assets/img/em-deal-apply.png", "side": {"src": "../assets/img/em-app-deal-form.png", "label": "主管手機", "from": [94.8, 90.3], "to": [0, 30], "note": "送出後"}, "role": "業務 → 主管", "text": "業務在系統建立洽案並送出；送出後，主管在手機 App 上也能馬上看到這張洽案申請，直接核准或駁回。", "hot": null, "act": "", "phone": false}, {"m": 1, "src": "../assets/img/em-open-form.png", "role": "專案經理", "text": "接案後開案，選「沿用專案代號」直接帶入洽案的代號，填寫履約資訊、用人員卡片建立團隊名冊後送出。", "hot": null, "act": "", "phone": false}, {"m": 2, "src": "../assets/img/em-requisition.png", "role": "採購", "text": "請購單列出每個品項的議價進度，從一次議價、二次議價到決標一目了然，也能看到最新報價與得標廠商。", "hot": null, "act": "", "phone": false}, {"m": 3, "src": "../assets/img/ct-step2.png", "role": "採購", "text": "建立合約時選擇廠商與專案，統一編號等資料自動帶入，長表單拆成五個步驟。", "hot": [94.3, 96.3], "act": "下一步", "phone": false}, {"m": 4, "src": "../assets/img/em-check.jpg", "side": {"src": "../assets/img/em-app-report.png", "label": "工地人員手機", "first": true, "reverse": true, "from": [92.7, 8.7], "to": [49.5, 60], "note": "送出後"}, "role": "工地人員 → 專案經理", "text": "工地人員用 App 拍照送出自主檢查，專案經理在系統上即時看到。", "hot": null, "act": "", "phone": false}, {"m": 4, "src": "../assets/img/em-site-progress.png", "role": "專案經理", "text": "專案經理在辦公室即時看到工程階段、整體進度與各工項的完成度，也能點進工項查看自主檢查表。", "hot": null, "act": "", "phone": false}, {"m": 5, "src": "../assets/img/em-drawing-list.png", "role": "申請人", "text": "圖說被駁回時，分類樹用數字與警示圖示標出要補件的地方，申請人一眼就知道該改哪裡。", "hot": [13.9, 21.9], "act": "查看簽核歷程", "phone": false}, {"m": 5, "src": "../assets/img/em-drawing-history.png", "links": [{"area": [5.6, 20.4, 5.4, 3.3], "go": -1, "label": "切回資訊列表"}], "role": "申請人", "text": "簽核歷程顯示卡在哪一關、誰駁回、原因是什麼；待簽核的關卡可以一鍵提醒。", "hot": null, "act": "", "phone": false}, {"m": 6, "src": "../assets/img/em-dashboard.png", "role": "辦公室・主管", "text": "辦公室看的進度監控：甘特圖、工程費用與待簽核表單放在同一頁，一眼掌握各專案進度。", "hot": null, "act": "", "phone": false}, {"m": 6, "src": "../assets/img/em-monitor.jpg", "role": "工地・主管", "text": "工地看的現場監控：切換各施工所的監視畫面，掌握出勤人力、機具、材料與累計進度。主管兩個畫面都能看。", "hot": null, "act": "", "phone": false}]}</script>
+    </div>
+  </section>
+
+  <!-- 3. 需求與解法 -->
+  <section class="highlights shots-even" id="highlights" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="highlights-title">需求與解法</h2>
+
+      <div class="core">
+        <p class="core-label">現場回報</p>
+        <h3 class="core-title">App 與 Web 分工，兼顧現場效率與管理需求</h3>
+        <p class="highlights-lead">工地人員和辦公室在意的事情不同，所以同一份資料設計成兩種介面：現場重視快速拍照回報，辦公室重視一眼掌握進度。</p>
+        <ol class="core-steps">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot shot-phone" src="../assets/img/em-app-report.png" alt="App 現場進度回報，拍照上傳並填寫檢查結果" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>現場拍照回報</h4>
+              <p>工地人員在 App 填寫自主檢查表並拍照上傳，不合格的結果以紅字標示。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/em-check.jpg" alt="自主檢查表側邊檢視，顯示現場照片與說明" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>照片與檢查項目對照</h4>
+              <p>點開自主檢查表，在側邊直接看到現場照片與說明，不必離開列表。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/em-check-list.png" alt="自主檢查表：依工項與樓層列出檢查表完成度，逐項標示待確認、已合格或不合格" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">03</p>
+              <h4>逐項掌握檢查結果</h4>
+              <p>依工項與樓層查看每份自主檢查表的完成度，各檢查項目標示待確認、已合格或不合格，新送出的以 NEW 提示。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>為什麼這樣設計</h4>
+          <p>工地人員需要快速回報，辦公室則需要掌握整體進度。因此，App 專注拍照與填寫檢查結果，Web 負責資料彙整與進度追蹤，讓同一筆資料依不同角色呈現所需資訊。</p>
+        </div>
+      </div>
+
+      <div class="core">
+        <p class="core-label">跨施工所監控</p>
+        <h3 class="core-title">提升監控層級，各地施工所一覽無遺</h3>
+        <p class="highlights-lead">從單一工程提升至公司層級，讓主管一次掌握各地施工狀況，並透過專案進度與施工現場兩種監控，兼顧工程進度與現場管理。</p>
+        <ol class="core-steps core-steps-2">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/em-dashboard.png" alt="進度監控：甘特圖、工程費用與待簽核表單" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>專案進度監控</h4>
+              <p>甘特圖、工程費用與待簽核表單放在同一頁，一眼掌握各專案進度。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/em-monitor.jpg" alt="工地現場監控：施工所清單、監視畫面與人力、機具、材料統計" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>施工現場監控</h4>
+              <p>從施工所清單切換各地的監視畫面，同時看到出勤人力、機具與材料。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>為什麼這樣設計</h4>
+          <p>不同角色關注的資訊不同：辦公室需要掌握專案進度與費用，工地則更重視現場人力與機具。因此依使用場景區分監控畫面，讓各角色快速取得所需資訊。</p>
+        </div>
+      </div>
+
+      <div class="core">
+        <p class="core-label">資料串接</p>
+        <h3 class="core-title">資料只填一次，後續流程自動沿用</h3>
+        <p class="highlights-lead">洽案、開案到合約共用同一份專案與廠商資料，後續表單自動帶入既有資訊，使用者只需確認並補充差異。</p>
+        <ol class="core-steps">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/em-deal-minutes.png" alt="洽案申請：洽案資料與會議紀錄列表" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>洽案時建立會議紀錄</h4>
+              <p>洽案階段就把每次的會議紀錄上傳到洽案單。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/em-open-code.png" alt="開案申請：選擇沿用專案代號，帶入洽案的代號" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>成案後沿用專案代號</h4>
+              <p>成案後開案可沿用專案代號；未成案則設為結案。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/ct-step2.png" alt="選擇專案與廠商後，統一編號等資料自動帶入" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">03</p>
+              <h4>合約自動帶入廠商與專案</h4>
+              <p>選擇廠商與專案後，統一編號等資料自動帶入，灰底為系統帶入、不需填寫。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>為什麼這樣設計</h4>
+          <p>專案代號與廠商資訊在不同階段反覆使用，重複填寫不僅耗時，也容易產生資料落差。因此以專案代號串聯流程，成案後延續使用，未成案則結案，讓資料管理更一致。</p>
+        </div>
+      </div>
+
+
+      <div class="core">
+        <p class="core-label">步驟式合約</p>
+        <h3 class="core-title">長合約分段填寫，送出前先預覽</h3>
+        <p class="highlights-lead">依不同合約內容安排填寫步驟，從基本資料、工程條件到條款與簽署，逐步完成並即時掌握填寫進度，最後可預覽完整合約。</p>
+        <ol class="core-steps">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/ct-type.png" alt="新增廠商合約：先選擇欲建制的合約類型" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>先選擇合約類型</h4>
+              <p>先選擇合約類型，系統依類型安排對應的填寫步驟。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/ct-steps.png" data-frames="../assets/img/ct-steps1.png ../assets/img/ct-steps.png" data-clicks="40,23.2 21,23.2" alt="步驟式建立合約：上方五個步驟條，下方有暫存、上一步與下一步；點開可看點擊步驟條切換段落" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>一次只填一個步驟</h4>
+              <p>點擊步驟條可直接跳到該段；依訪談需求加入暫存，填到一半也能先存。</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../assets/img/ct-review.png" alt="確認合約：以正式合約書格式預覽填寫內容" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">03</p>
+              <h4>送出前預覽完整合約</h4>
+              <p>以正式合約書格式預覽，確認無誤再儲存，避免送出後才發現錯誤。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>為什麼這樣設計</h4>
+          <p>合約內容繁雜，且不同合約所需欄位不同，因此依合約類型彈性安排步驟，並提供暫存功能，讓使用者能分段完成，最後透過預覽降低遺漏與錯誤。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 成果與過程 -->
+  <section class="devnotes" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="results-title">成果與過程</h2>
+      <div class="chapter">
+        <div class="chapter-head"><h3>設計流程</h3></div>
+        <p class="chapter-lead">這是提案階段的設計，Web 與 App 的介面都由我獨立完成，接案後才有其他同仁加入。依公司規定，設計師在提案階段不直接接觸客戶，需求由業務經理訪談後帶回。</p>
+        <ol class="steps steps-4"><li><time>需求</time><b>業務經理帶回需求</b><p>業務經理訪談客戶，我依帶回的需求整理流程與痛點。</p></li><li><time>規劃</time><b>拆解流程與模組</b><p>把工程從洽案到結案拆成模組，決定哪些資料可以往下帶。</p></li><li><time>設計</time><b>以 Figma 繪製提案畫面</b><p>Web 與 App 共用一套元件，設計主要流程與狀態。</p></li><li><time>對齊</time><b>與業務經理確認</b><p>確認範圍與優先順序，讓提案符合客戶期待。</p></li></ol>
+      </div>
+      <div class="chapter">
+        <div class="chapter-head"><h3>專案優勢</h3></div>
+        <p class="chapter-lead">過去曾參與內部系統設計，對企業流程與資料管理有一定理解，因此能快速掌握這類系統的運作邏輯，並將複雜的業務流程轉化為具體的功能與操作介面。像是議價輪次、圖說送審、建照與消防文件這些營建業流程，都能轉成對應的功能設計。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 反思 -->
+  <section class="journey" id="reflection" aria-labelledby="reflection-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="reflection-title">反思</h2>
+      <div class="core-why reflect-status">
+        <h4>專案現況</h4>
+        <p>目前已離職，無法持續追蹤專案後續的開發與落地情況，因此本次成果以提案階段的設計為主，尚未經過實際上線驗證。</p>
+      </div>
+      <p class="journey-lead">回顧這次專案，有三個地方是我下次會做得更好的：</p>
+      <div class="lessons">
+        <ul>
+          <li><strong>縮小需求轉述落差。</strong>受公司規範限制，只能透過業務經理了解客戶需求。下次會先準備訪談題綱，並蒐集客戶實際表單與現場照片，讓設計更貼近第一手情境。</li>
+          <li><strong>將真實工地環境納入設計。</strong>除了流程完整，也應考慮網路不穩、戴手套操作與強光等條件，優先規劃離線暫存、加大點擊範圍與提高畫面對比。</li>
+          <li><strong>先驗證核心流程，再逐步擴充。</strong>七個模組同時導入門檻較高，下次會先針對「現場品管」進行可用性測試，確認工地人員能順利使用，再逐步擴展其他模組。</li>
+        </ul>
+      </div>
+      <p class="journey-lead journey-key">提案能呈現設計構想，但唯有經過真實場域的使用與驗證，才能確認產品是否真正解決問題。</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="case-next" id="more-work">
+      <a href="warehouse.html"><small>← 上一個案例</small><b>出入庫管理系統</b></a>
+      <a href="customer-journey.html" class="next"><small>下一個案例 →</small><b>顧客消費歷程管理平台</b></a>
+    </nav>
+  </div>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>一起聊聊吧</h2>
+      <p>歡迎來信討論職缺或合作機會。</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary copy-email" data-email="teenan2464@gmail.com" aria-label="複製信箱 teenan2464@gmail.com">teenan2464@gmail.com<svg class="ic-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ic-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tinaliu0924" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="toc" id="toc" aria-label="本頁目錄">
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#overview" data-sections="overview">專案介紹</a></li>
+    <li><a href="#scenes" data-sections="scenes">系統流程</a></li>
+    <li><a href="#highlights" data-sections="highlights">需求與解法</a></li>
+    <li><a href="#results" data-sections="results">成果與過程</a></li>
+    <li><a href="#reflection" data-sections="reflection more-work">反思</a></li>
+  </ol>
+</nav>
+
+<footer class="site-footer">© 2026 Tina Liu · <a href="mailto:teenan2464@gmail.com">teenan2464@gmail.com</a></footer>
+<script src="../assets/site.js?v=20261124043250"></script>
+</body>
+</html>

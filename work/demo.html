@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用藥提醒App測試版｜Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261124043250">
+</head>
+<body class="demo-page">
+
+<header class="demo-bar">
+  <a class="back" href="../index.html#medreminder" aria-label="回作品集">←<span class="back-text"> 回作品集</span></a>
+  <p>用藥提醒App測試版<span>重新整理會回到初始狀態</span></p>
+  <button class="btn btn-primary btn-sm" type="button" id="demo-reset">重置 demo</button>
+</header>
+
+<main class="demo-stage" id="demo-stage">
+  <div class="demo-phone" id="demo-phone">
+    <iframe id="medreminder-demo" src="medreminder-demo/index.html" title="用藥提醒App互動示範" width="402" height="874"></iframe>
+    <span class="demo-island" aria-hidden="true"></span>
+  </div>
+</main>
+
+<script>
+  // 手機外框固定 402×874（iPhone 17 畫面），視窗放不下時等比縮小
+  const stage = document.getElementById('demo-stage');
+  const phone = document.getElementById('demo-phone');
+  const fit = () => {
+    const pad = 32;
+    const scale = Math.min(1, (stage.clientHeight - pad) / phone.offsetHeight, (stage.clientWidth - pad) / phone.offsetWidth);
+    phone.style.setProperty('--scale', scale);
+  };
+  addEventListener('resize', fit);
+  fit();
+  // 重置 demo：示範資料回到初始狀態
+  document.getElementById('demo-reset').addEventListener('click', () => {
+    document.getElementById('medreminder-demo').contentWindow.postMessage('medreminder-demo:reset', '*');
+  });
+</script>
+</body>
+</html>

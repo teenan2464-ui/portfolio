@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>出入庫管理系統｜Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261124043250">
+</head>
+<body class="case-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Tina Liu</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#about">關於我</a>
+      <a href="../index.html#medreminder">用藥提醒App</a>
+      <details class="menu">
+        <summary>其他作品</summary>
+        <div class="menu-panel">
+          <a href="warehouse.html">出入庫管理系統</a>
+          <a href="contract.html">工程管理系統</a>
+          <a href="customer-journey.html">顧客消費歷程管理平台</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="#contact">與我聯繫</a>
+      <button class="nav-toggle" aria-label="開啟選單" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 專案介紹 -->
+  <section class="project" id="overview">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← 其他作品</a>
+      <div class="project-grid">
+        <div class="project-text">
+          <h1 class="project-title"><span>讓掃描不再被打斷的</span>出入庫管理系統</h1>
+          <p class="project-lead">結合條碼機與掃描器的倉儲系統，取代人工與 Excel。上線後我回到現場觀察，發現倉儲人員掃描時根本不看螢幕，於是重新設計欄位焦點的切換邏輯，讓掃描節奏不再被打斷。</p>
+          <dl class="project-meta"><div><dt>角色</dt><dd>唯一的 UI/UX 設計師</dd></div><div><dt>團隊</dt><dd>1 PM、1 UI/UX、2 工程師</dd></div><div><dt>使用者</dt><dd>採購人員、倉儲人員</dd></div><div><dt>時間</dt><dd>2025.02 — 05（3 個月）</dd></div></dl>
+        </div>
+        <figure class="project-cover"><img class="shot" src="../assets/img/wh-cover.jpg" width="2000" height="754" alt="第二版介面：入庫清單、入庫資訊與入倉掃描視窗" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 問題情境 -->
+  <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="scenes-title">問題情境</h2>
+      <p class="scenes-lead">公司的倉儲作業過去依賴人工與 Excel。需求由 PM 提出，我再向倉儲同仁了解實際使用情境，歸納出三個問題。</p>
+      <div class="scene-list">
+        <figure class="scene">
+          <div class="scene-art"><img src="../assets/img/wh-scene-steps.jpg" width="1200" height="675" alt="人員坐在桌前，一手翻著成疊的紙本單據、一手操作滑鼠，把資料逐筆輸入 Excel" loading="lazy"></div>
+          <figcaption><h3>步驟繁瑣</h3><p>以 Excel 管理出入庫，<br>操作步驟多、效率低。</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <div class="scene-art"><img src="../assets/img/wh-scene-count.jpg" width="1080" height="675" alt="倉儲人員站在貨架前，拿著夾板在紙本表格上逐項清點品項" loading="lazy"></div>
+          <figcaption><h3>重複盤點</h3><p>輸入完成後仍需再盤點確認，<br>作業時間拉長。</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <div class="scene-art"><img src="../assets/img/wh-scene-3.jpg" width="1200" height="675" alt="兩位同事各自看著自己的 Excel，上方分別寫著 128？與 96？，數字對不起來" loading="lazy"></div>
+          <figcaption><h3>資料不同步</h3><p>系統未整合，資料無法即時<br>與財務同步，常有落差。</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 設計與迭代 -->
+  <section class="highlights" id="highlights" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="highlights-title">設計與迭代</h2>
+
+      <div class="core">
+        <p class="core-label">第一版｜取代 Excel</p>
+        <h3 class="core-title">用條碼掃描取代手動登錄</h3>
+        <p class="highlights-lead">第一版結合條碼機與掃描器，以掃描取代手動輸入 Excel，<strong>解決了手 key 造成的輸入錯誤</strong>。不過掃完品項後，仍需要先點選儲位欄位，再掃描儲位條碼。</p>
+        <figure class="wh-demo" data-version="1" aria-label="第一版操作示範：每個步驟都要用滑鼠點選欄位">
+          <div class="whd-frame"><div class="whd-stage"><span class="whd-count">游標點擊 <b>0</b> 次</span>
+            <div class="whd-dialog">
+              <div class="whd-head">入倉</div>
+              <div class="whd-scanrow"><div class="whd-input" data-field="item"><span class="whd-val"></span><span class="whd-ph">請輸入品項條碼</span></div><span class="whd-btn">輸入</span></div>
+              <p class="whd-hint" aria-hidden="true">品項已到齊，請掃描儲位</p>
+              <p class="whd-toast" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5v.01"/></svg>此品項不在本次入倉清單中，請確認後重新掃描</p>
+              <div class="whd-table">
+                <div class="whd-tr whd-th"><span>品名</span><span>已入／應入</span><span>入倉完成度</span><span>儲位<em>*</em></span></div>
+                <div class="whd-tr" data-row="0"><span><small>PO2025022000001</small>無線藍牙鍵盤滑鼠組</span><span class="whd-qty"><b>0</b>/2</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc0"><span class="whd-val"></span><span class="whd-ph">請輸入儲位條碼</span></div></span></div>
+                <div class="whd-tr" data-row="1"><span><small>PO2025022000002</small>SSD 固態硬碟 1TB</span><span class="whd-qty"><b>0</b>/1</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc1"><span class="whd-val"></span><span class="whd-ph">請輸入儲位條碼</span></div></span></div>
+              </div>
+              <div class="whd-foot"><span>入倉日期：2025-02-22</span><span class="whd-acts"><i>取消</i><i>暫存</i><i class="whd-done">完成入倉</i></span></div>
+            </div>
+            <span class="whd-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5h6.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span class="whd-scanner" aria-hidden="true"><img src="../assets/img/wh-scanner.png" width="56" height="56" alt=""><b class="whd-sound">嗶</b></span>
+          </div></div>
+          <figcaption class="whd-meta"><ol class="whd-steps"><li><span>01</span>點選品項欄位，掃描品項</li><li><span>02</span>點選儲位欄位，掃描儲位</li><li><span>03</span>點回品項欄位，掃下一筆</li></ol></figcaption>
+        </figure>
+      </div>
+
+      <div class="core">
+        <p class="core-label">第二版｜上線後迭代</p>
+        <h3 class="core-title">讓游標跟著工作節奏走</h3>
+        <p class="highlights-lead">第一版取代了 Excel，但我到現場觀察後發現，倉儲人員連續掃描時<strong>幾乎不抬頭看螢幕</strong>，游標停在錯誤的欄位就必須手動切換，節奏一被打斷，輸入錯誤與漏掃就明顯增加。</p>
+        <figure class="wh-demo" data-version="2" aria-label="第二版操作示範：掃描後資料自動帶入，游標自動跳到下一個欄位">
+          <div class="whd-frame"><div class="whd-stage"><span class="whd-count">游標點擊 <b>0</b> 次</span>
+            <div class="whd-dialog">
+              <div class="whd-head">入倉</div>
+              <div class="whd-scanrow"><div class="whd-input" data-field="item"><span class="whd-val"></span><span class="whd-ph">請輸入品項條碼</span></div><span class="whd-btn">輸入</span></div>
+              <p class="whd-hint" aria-hidden="true">品項已到齊，請掃描儲位</p>
+              <p class="whd-toast" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5v.01"/></svg>此品項不在本次入倉清單中，請確認後重新掃描</p>
+              <div class="whd-table">
+                <div class="whd-tr whd-th"><span>品名</span><span>已入／應入</span><span>入倉完成度</span><span>儲位<em>*</em></span></div>
+                <div class="whd-tr" data-row="0"><span><small>PO2025022000001</small>無線藍牙鍵盤滑鼠組</span><span class="whd-qty"><b>0</b>/2</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc0"><span class="whd-val"></span><span class="whd-ph">請輸入儲位條碼</span></div></span></div>
+                <div class="whd-tr" data-row="1"><span><small>PO2025022000002</small>SSD 固態硬碟 1TB</span><span class="whd-qty"><b>0</b>/1</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc1"><span class="whd-val"></span><span class="whd-ph">請輸入儲位條碼</span></div></span></div>
+              </div>
+              <div class="whd-foot"><span>入倉日期：2025-02-22</span><span class="whd-acts"><i>取消</i><i>暫存</i><i class="whd-done">完成入倉</i></span></div>
+            </div>
+            <span class="whd-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5h6.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span class="whd-scanner" aria-hidden="true"><img src="../assets/img/wh-scanner.png" width="56" height="56" alt=""><b class="whd-sound">嗶</b></span>
+          </div></div>
+          <figcaption class="whd-meta"><ol class="whd-steps"><li><span>01</span>掃描品項，數量即時累加</li><li><span>02</span>掃到清單外品項，即時警示</li><li><span>03</span>達 100% 自動跳到儲位</li><li><span>04</span>掃完儲位，自動回到品項</li></ol></figcaption>
+        </figure>
+        <div class="core-why">
+          <h4>為什麼這樣設計</h4>
+          <p>系統雖已數位化，操作流程仍需貼合現場工作習慣，因此從三個面向優化：</p>
+          <ul class="why-list">
+            <li><strong>操作流程：</strong>依照「手持掃描器、眼睛確認貨品」的節奏設計焦點切換，減少手、眼與螢幕之間的反覆切換。</li>
+            <li><strong>即時狀態回饋：</strong>透過不同聲音與顏色區分三種狀態：一般掃描、品項到齊（可開始掃描儲位）、掃到清單外品項，讓人員不看螢幕也能掌握狀態。</li>
+            <li><strong>掃描規則：</strong>考量同品項多數量與不限順序的掃描需求，與工程師討論並確認操作邏輯，兼顧現場效率與系統可行性。</li>
+          </ul>
+        </div>
+        <div class="core-why core-logic">
+          <h4>邏輯判斷設計</h4>
+          <ol class="logic-list">
+            <li><span class="logic-if">開啟入倉視窗</span><span class="logic-then">預設聚焦「品項條碼」欄位，不需要點擊</span></li>
+            <li><span class="logic-if">掃描品項條碼</span><span class="logic-then">比對到該品項，已入數量 +1、完成度即時更新</span></li>
+            <li><span class="logic-if">掃描順序不限</span><span class="logic-then">只要在同一張入倉清單內，掃 A 品項途中改掃 B 品項，也會累加到 B，不影響 A 的已入數量</span></li>
+            <li><span class="logic-if">掃到不在入倉清單中的品項</span><span class="logic-then">輸入框變紅並跳出提示，發出與成功不同的連續警示音，數量不累加</span></li>
+            <li><span class="logic-if">已入數量＝應入數量（完成度 100%）</span><span class="logic-then">發出與一般掃描不同的完成提示音，提醒可以開始掃儲位；游標自動跳到該品項的「儲位」欄位，並顯示「請掃描儲位」</span></li>
+            <li><span class="logic-if">掃描儲位條碼</span><span class="logic-then">帶入儲位後，游標自動回到「品項條碼」欄位</span></li>
+            <li><span class="logic-if">所有品項完成度 100% 且已填儲位</span><span class="logic-then">「完成入倉」按鈕才會啟用</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 成果與過程 -->
+  <section class="devnotes" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="results-title">成果與過程</h2>
+      <div class="kpis"><div class="kpi"><p class="kpi-label">作業時間</p><b>−20<small>%</small></b><span>平均掃描作業時間：16 秒 → 13 秒</span></div><div class="kpi"><p class="kpi-label">手動切換</p><b>≈0<small>次</small></b><span>掃描中不再手動切換欄位</span></div><div class="kpi"><p class="kpi-label">錯誤率</p><b>↓<small></small></b><span>出入庫紀錄錯誤減少</span></div></div>
+<p class="kpi-note">＊由 3 位倉儲同仁實際操作，比較前後兩版的平均作業時間。每個品項都省下切換欄位的點擊，品項越多，節省的時間越多。</p>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">01</span><h3>設計流程</h3></div>
+        <ol class="steps steps-4"><li><time>需求</time><b>了解使用情境</b><p>PM 提出需求後，我向倉儲同仁詢問實際使用情境，整理出步驟繁瑣、重複盤點、資料不同步。</p></li><li><time>設計</time><b>第一版系統</b><p>結合條碼機與掃描器，以掃描取代手 key，解決輸入錯誤，並即時掌握庫存。</p></li><li><time>上線後</time><b>回到現場觀察</b><p>發現倉儲人員掃描時不看螢幕，游標停錯欄位打斷節奏。</p></li><li><time>迭代</time><b>重新設計焦點切換</b><p>掃描完成後游標自動跳到下一個欄位，連續掃描不中斷。</p></li></ol>
+      </div>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">02</span><h3>影響</h3></div>
+        <ol class="findings principles"><li class="finding"><span class="principle-num">1</span><b>倉儲人員</b><p>操作更直覺，不需分心看螢幕就能完成輸入。</p></li><li class="finding"><span class="principle-num">2</span><b>採購與管理層</b><p>數據更即時可靠，能更快追蹤庫存。</p></li><li class="finding"><span class="principle-num">3</span><b>財務</b><p>採購與財務能即時掌握數據，減少溝通往返。</p></li></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 反思 -->
+  <section class="journey" id="reflection" aria-labelledby="reflection-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="reflection-title">反思</h2>
+      <p class="journey-lead">這個專案讓我體會到，系統上線不代表設計完成。回頭看，有三件事是我最大的收穫：</p>
+      <div class="lessons">
+        <ul>
+          <li><strong>到現場才看得到真正的問題。</strong>第一版已經取代 Excel，但直到觀察倉儲人員實際作業，才發現他們掃描時幾乎不看螢幕。數位化之後，流程是否貼合現場，仍需要回到使用情境驗證。</li>
+          <li><strong>回饋要跟著使用者的注意力走。</strong>使用者的視線在貨品上，因此我用聲音與顏色區分掃描狀態，減少抬頭看螢幕的次數。</li>
+          <li><strong>下一步：把提示帶到手上的裝置。</strong>公司以手機作為掃描器，目前沿用手機原生的掃描介面，顏色提示仍顯示在電腦畫面上。如果有機會，我想在手機的掃描介面直接顯示「品項到齊，請掃儲位」「不在入倉清單中」等提示，讓同仁完全不必抬頭，就能完成整個入倉流程。</li>
+        </ul>
+      </div>
+      <p class="journey-lead journey-key">好的系統不只是把流程數位化，而是讓使用者專注在手上的工作。</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="case-next" id="more-work">
+      <a href="../index.html#medreminder"><small>← 主打作品</small><b>用藥提醒App</b></a>
+      <a href="contract.html" class="next"><small>下一個案例 →</small><b>工程管理系統</b></a>
+    </nav>
+  </div>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>一起聊聊吧</h2>
+      <p>歡迎來信討論職缺或合作機會。</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary copy-email" data-email="teenan2464@gmail.com" aria-label="複製信箱 teenan2464@gmail.com">teenan2464@gmail.com<svg class="ic-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ic-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tinaliu0924" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="toc" id="toc" aria-label="本頁目錄">
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#overview" data-sections="overview">專案介紹</a></li>
+    <li><a href="#scenes" data-sections="scenes">問題情境</a></li>
+    <li><a href="#highlights" data-sections="highlights">設計與迭代</a></li>
+    <li><a href="#results" data-sections="results">成果與過程</a></li>
+    <li><a href="#reflection" data-sections="reflection more-work">反思</a></li>
+  </ol>
+</nav>
+
+<footer class="site-footer">© 2026 Tina Liu · <a href="mailto:teenan2464@gmail.com">teenan2464@gmail.com</a></footer>
+<script src="../assets/site.js?v=20261124043250"></script>
+</body>
+</html>

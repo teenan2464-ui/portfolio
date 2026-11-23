@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>顧客消費歷程管理平台｜Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261124043250">
+</head>
+<body class="case-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Tina Liu</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#about">關於我</a>
+      <a href="../index.html#medreminder">用藥提醒App</a>
+      <details class="menu">
+        <summary>其他作品</summary>
+        <div class="menu-panel">
+          <a href="warehouse.html">出入庫管理系統</a>
+          <a href="contract.html">工程管理系統</a>
+          <a href="customer-journey.html">顧客消費歷程管理平台</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="#contact">與我聯繫</a>
+      <button class="nav-toggle" aria-label="開啟選單" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 專案介紹 -->
+  <section class="project" id="overview">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← 其他作品</a>
+      <div class="project-grid">
+        <div class="project-text">
+          <h1 class="project-title"><span>讓追蹤設定不再需要行銷專業的</span>顧客消費歷程管理平台</h1>
+          <p class="project-lead">串接 Email、簡訊、一頁式網頁與社群平台的行銷自動化平台。我中途接手改版，先盤點第一版的問題、重新做使用者研究，把只有行銷專家才會設定的「追蹤功能」，改成一般使用者也能看懂、即時確認結果的流程。</p>
+          <dl class="project-meta"><div><dt>角色</dt><dd>UI/UX 設計師（改版主導）</dd></div><div><dt>團隊</dt><dd>1 PM、2 UI/UX、3 前後端工程師</dd></div><div><dt>使用者</dt><dd>廣告業務、行銷專員</dd></div><div><dt>時間</dt><dd>2022.05 — 08（3 個月）</dd></div></dl>
+        </div>
+        <figure class="project-cover"><img class="shot" src="../assets/img/cj-cover.jpg" width="1720" height="988" alt="顧客消費歷程管理平台：事件追蹤列表與顧客旅程流程設定畫面" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 問題情境 -->
+  <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="scenes-title">問題情境</h2>
+      <p class="scenes-lead">我訪談廣告業務、親自操作競品，並用 Prototype 做易用性測試，發現問題集中在「追蹤功能」的設定。</p>
+      <p class="scene-journey-intro">我請 3 位使用者試用第一版設計，完成「設定滾軸移動至畫面 50% 時觸發追蹤」，並記錄每個步驟的操作與感受：</p>
+      <figure class="scene-journey"><img class="shot" src="../assets/img/cj-journey-before.png" width="1508" height="644" alt="修改前的使用者旅程地圖：設定「滾軸移動至畫面 50% 時觸發追蹤」，在選擇邏輯步驟情緒最低" loading="lazy"><figcaption>修改前的使用者旅程：「選擇邏輯」是情緒最負面、停留最久的步驟</figcaption></figure>
+      <div class="scene-list is-text">
+        <figure class="scene">
+          <figcaption><h3><span class="pain-icon" aria-hidden="true">!</span>操作過於複雜</h3><p>需要具備行銷知識<br>才能正確設定，<br>一般使用者難以上手。</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <figcaption><h3><span class="pain-icon" aria-hidden="true">!</span>說明不夠直覺</h3><p>只有文字描述，<br>無法呈現實際操作<br>與畫面互動。</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <figcaption><h3><span class="pain-icon" aria-hidden="true">!</span>缺乏即時回饋</h3><p>設定完無法立即確認結果，<br>容易誤判。</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 需求與解法 -->
+  <section class="highlights" id="highlights" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="highlights-title">需求與解法</h2>
+
+      <div class="core">
+        <p class="core-label">追蹤功能改版</p>
+        <h3 class="core-title">設定的同時，就看到結果</h3>
+        <p class="highlights-lead">以「追蹤功能」的「調整參數」為主要改版範圍，提出三個方向。</p>
+        <div class="cj-compare">
+          <figure class="cj-before">
+            <p class="cj-tag">修改前</p>
+            <img class="shot" src="../assets/img/cj-before.png" width="1680" height="990" alt="修改前：類型、邏輯（大於、等於、小於）與欄位值分開設定，只有文字說明" loading="lazy">
+            <figcaption>邏輯要自己判斷「大於、等於、小於」，數值手動輸入，設定完也看不出效果。</figcaption>
+          </figure>
+          <figure class="cj-demo" aria-label="修改後：選擇捲動深度，右側示意圖即時顯示觸發位置">
+            <p class="cj-tag is-after">修改後</p>
+            <div class="cjd-frame"><div class="cjd-stage">
+              <div class="cjd-card">
+                <div class="cjd-head">設定觸發條件</div>
+                <div class="cjd-body">
+                  <div class="cjd-form">
+                    <div class="cjd-row"><span class="cjd-lab">事件類型</span><span class="cjd-sel">Scroll<i></i></span></div>
+                    <div class="cjd-group"><p class="cjd-legend">參數設定</p>
+                      <div class="cjd-row"><span class="cjd-lab">滾軸移動至畫面</span>
+                        <div class="cjd-dd"><button type="button" class="cjd-sel cjd-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="滾軸移動至畫面的百分比"><span class="cjd-value">0%</span><i></i></button>
+                          <ul class="cjd-list" role="listbox" hidden><li role="option" data-v="0">0%</li><li role="option" data-v="10">10%</li><li role="option" data-v="20">20%</li><li role="option" data-v="30">30%</li><li role="option" data-v="40">40%</li><li role="option" data-v="50">50%</li><li role="option" data-v="60">60%</li><li role="option" data-v="70">70%</li><li role="option" data-v="80">80%</li><li role="option" data-v="90">90%</li><li role="option" data-v="100">100%</li></ul></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cjd-preview"><p class="cjd-legend">示意圖</p>
+                    <div class="cjd-browser"><div class="cjd-bar"><i></i><i></i><i></i></div><div class="cjd-view"><div class="cjd-page"><span>0%</span><span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>50%</span><span>60%</span><span>70%</span><span>80%</span><span>90%</span><span>100%</span><div class="cjd-line"><b>觸發起始線</b></div></div></div><span class="cjd-thumb"></span></div>
+                  </div>
+                </div>
+                <div class="cjd-foot"><i>取消</i><i class="cjd-save">儲存</i></div>
+              </div>
+              <span class="cjd-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5h6.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            </div></div>
+            <figcaption>試試看：選擇不同的捲動深度，右側示意圖會即時捲到觸發的位置。</figcaption>
+          </figure>
+        </div>
+        <div class="core-why">
+          <h4>為什麼這樣設計</h4>
+          <p>針對訪談發現的三個痛點，從三個方向調整「調整參數」的設定方式：</p>
+          <ul class="why-list">
+            <li><strong>簡化操作流程：</strong>拿掉「邏輯」這一步，只要選擇捲動深度，降低行銷知識的門檻。</li>
+            <li><strong>用互動示意取代文字：</strong>以示意圖即時呈現觸發位置，設定的同時就能理解結果。</li>
+            <li><strong>數值改用下拉選單：</strong>原本逐一輸入數值瑣碎又容易打錯，改為下拉選單，減少錯誤與時間。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 成果與過程 -->
+  <section class="devnotes" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="results-title">成果與過程</h2>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">01</span><h3>設計流程</h3></div>
+        <figure class="cj-timeline"><img class="shot" src="../assets/img/cj-timeline.png" width="1384" height="632" alt="專案時程：三月進設計階段，四月底接手 UI/UX 設計，重新研究調查後完成版本 2，八月進開發" loading="lazy"><figcaption>四月底接手時，第一版已完成；我重新做研究調查，再設計版本 2。</figcaption></figure>
+        <ol class="steps steps-4"><li><time>接手</time><b>盤點第一版</b><p>前期由另一位設計師負責，我先盤點第一版的問題，再決定改版方向。</p></li><li><time>研究</time><b>訪談與競品分析</b><p>訪談公司內部的廣告業務，並親自操作競品。</p></li><li><time>設計</time><b>Mockup 與 Prototype</b><p>定義 UI 風格，以 Figma 繪製 Mockup、製作 Prototype。</p></li><li><time>驗證</time><b>改版前後易用性測試</b><p>測試改版前後的設定時間與感受，並與前端、QA 溝通規格。</p></li></ol>
+      </div>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">02</span><h3>修改後的使用者旅程</h3></div>
+        <p class="chapter-lead">同樣請 3 位使用者完成相同任務，步驟從 4 步減為 3 步，完成時間從約 3 分鐘縮短到 1 分鐘。對照上方第一版的旅程，「選擇數值」時看到示意圖，是感受最正面的時刻。</p>
+        <figure class="cj-journey-after"><img class="shot" src="../assets/img/cj-journey-after.png" width="1507" height="684" alt="修改後的使用者旅程：3 個步驟、約 1 分鐘，看到示意圖時情緒最高" loading="lazy"><figcaption>修改後的使用者旅程</figcaption></figure>
+        <div class="kpis kpis-gain"><div class="kpi"><p class="kpi-label"><span class="gain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>設定時間</p><b>3→1<small>分鐘</small></b><span>完成追蹤設定的時間</span></div><div class="kpi"><p class="kpi-label"><span class="gain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>使用感受</p><b>↑<small></small></b><span>使用者旅程中的正面感受明顯提升</span></div><div class="kpi"><p class="kpi-label"><span class="gain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>輸入錯誤</p><b>↓<small></small></b><span>改用下拉選單後，輸入錯誤率降低</span></div></div>
+        <p class="kpi-note">＊改版前後各請 3 位使用者完成相同任務：設定「滾軸移動至畫面 50% 時觸發追蹤」，比較完成時間與操作感受。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 反思 -->
+  <section class="journey" id="reflection" aria-labelledby="reflection-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="reflection-title">反思</h2>
+      <p class="journey-lead">這是一個中途接手的改版專案，回頭看，有三件事讓我印象最深：</p>
+      <div class="lessons">
+        <ul>
+          <li><strong>先盤點問題，再決定改版方向。</strong>前期設計已完成，我沒有直接推翻重做，而是重新整理既有問題並進行使用者研究，確認痛點集中在「追蹤功能」後，將改版範圍聚焦於「調整參數」，在有限時程內優先解決核心問題。</li>
+          <li><strong>讓使用者看見結果，比文字說明更有效。</strong>第一版以文字解釋大於、等於、小於，使用者仍難以理解；改以示意圖即時呈現觸發位置後，設定時間從約 3 分鐘縮短至 1 分鐘，讓操作與結果更直覺。</li>
+          <li><strong>下一步：擴大使用者驗證。</strong>本次僅邀請 3 位公司內部同仁測試，後續希望納入實際使用平台的行銷人員，並將即時示意的設計延伸至其他事件類型，驗證不同情境下的適用性。</li>
+        </ul>
+      </div>
+      <p class="journey-lead journey-key">好的設定介面，不是讓使用者學會規則，而是讓他一眼看懂結果。</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="case-next" id="more-work">
+      <a href="contract.html"><small>← 上一個案例</small><b>工程管理系統</b></a>
+      <a href="../index.html#work" class="next"><small>→</small><b>回到作品列表</b></a>
+    </nav>
+  </div>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>一起聊聊吧</h2>
+      <p>歡迎來信討論職缺或合作機會。</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary copy-email" data-email="teenan2464@gmail.com" aria-label="複製信箱 teenan2464@gmail.com">teenan2464@gmail.com<svg class="ic-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ic-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tinaliu0924" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="toc" id="toc" aria-label="本頁目錄">
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#overview" data-sections="overview">專案介紹</a></li>
+    <li><a href="#scenes" data-sections="scenes">問題情境</a></li>
+    <li><a href="#highlights" data-sections="highlights">需求與解法</a></li>
+    <li><a href="#results" data-sections="results">成果與過程</a></li>
+    <li><a href="#reflection" data-sections="reflection more-work">反思</a></li>
+  </ol>
+</nav>
+
+<footer class="site-footer">© 2026 Tina Liu · <a href="mailto:teenan2464@gmail.com">teenan2464@gmail.com</a></footer>
+<script src="../assets/site.js?v=20261124043250"></script>
+</body>
+</html>
