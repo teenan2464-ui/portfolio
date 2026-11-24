@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Construction Project Management System | Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261124131421">
+</head>
+<body class="case-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Tina Liu</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#medreminder">MedReminder</a>
+      <details class="menu">
+        <summary>More Work</summary>
+        <div class="menu-panel">
+          <a href="warehouse.html">Warehouse Inbound &amp; Outbound System</a>
+          <a href="customer-journey.html">Customer Journey Platform</a>
+          <a href="contract.html">Construction Project Management System</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="lang-switch" href="../../work/contract.html" lang="zh-Hant" hreflang="zh-Hant" aria-label="切換到中文版">中文</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Get in Touch</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 專案介紹 -->
+  <section class="project" id="overview">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← More Work</a>
+      <div class="project-grid">
+        <div class="project-text">
+          <h1 class="project-title"><span>From first inquiry to site monitoring, in one flow</span>Construction Project Management System</h1>
+          <p class="project-lead">An integrated project management platform for construction companies, bringing every stage of a project — inquiry, kickoff, purchasing, contracts, on-site QC, document approval and monitoring — into one system. The office manages and approves on the web, site crews report progress through the app, and managers follow everything from a dashboard.</p>
+          <dl class="project-meta"><div><dt>Role</dt><dd>UI/UX Designer (Solo, Proposal Phase)</dd></div><div><dt>Team</dt><dd>1 Sales Manager, 1 UI/UX</dd></div><div><dt>Users</dt><dd>PMs, site crew, procurement, managers</dd></div><div><dt>Timeline</dt><dd>Apr – Jun 2025 (Proposal)</dd></div></dl>
+        </div>
+        <figure class="project-cover"><img class="shot" src="../../assets/img/em-dashboard.png" alt="Monitoring dashboard: Gantt chart, total project costs and pending approvals" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 系統流程 -->
+  <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="scenes-title">System Flow</h2>
+      <p class="scenes-lead">Project data carries forward from the first inquiry, so nothing has to be re-entered at each stage.</p>
+<figure class="sysflow" aria-label="System flow: three phases — pre-project, procurement and execution — with document approval and monitoring running from kickoff to completion; seven modules in total">
+  <div class="sysflow-track">
+    <section class="sysflow-phase is-pre" aria-label="Pre-project phase">
+      <p class="sysflow-phase-name"><b>Pre-project</b>Winning the job</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="1"><span class="sysflow-num">01</span><h3>Inquiry</h3><p>Log inquiries and meeting notes</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span><span class="sysflow-tag is-app">App</span></span></li>
+        <li class="sysflow-node" value="2"><span class="sysflow-num">02</span><h3>Kickoff</h3><p>Carry over code and notes, build the roster</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+    <section class="sysflow-phase is-buy" aria-label="Procurement phase">
+      <p class="sysflow-phase-name"><b>Procurement</b>Purchasing and contracts</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="3"><span class="sysflow-num">03</span><h3>Purchasing</h3><p>Requests, quotes, comparison, award</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+        <li class="sysflow-node" value="4"><span class="sysflow-num">04</span><h3>Contracts</h3><p>Vendor data filled in, step-by-step setup</p><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+    <section class="sysflow-phase is-run" aria-label="Execution phase">
+      <p class="sysflow-phase-name"><b>Execution</b>Construction and QC</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="5"><span class="sysflow-num">05</span><h3>On-site QC</h3><p>Photo reports, self-inspection forms</p><span class="sysflow-tags"><span class="sysflow-tag is-app">App</span><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+  </div>
+  <div class="sysflow-bands">
+    <section class="sysflow-phase sysflow-band is-doc" aria-label="Document approval, from kickoff to completion">
+      <p class="sysflow-phase-name"><b>Approvals</b>From kickoff on</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="6"><span class="sysflow-num">06</span><h3>Document approval</h3><div class="sysflow-feat"><strong>After kickoff</strong><ul><li>Building permits</li><li>Government filings</li><li>Drawing reviews</li></ul></div><div class="sysflow-feat"><strong>During and after construction</strong><ul><li>Fire code compliance</li></ul></div><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span><span class="sysflow-tag is-app">App</span></span></li>
+      </ol>
+    </section>
+    <section class="sysflow-phase sysflow-band is-mon" aria-label="Monitoring, from kickoff to completion">
+      <p class="sysflow-phase-name"><b>Monitoring</b>From kickoff on</p>
+      <ol class="sysflow-nodes">
+        <li class="sysflow-node" value="7"><span class="sysflow-num">07</span><h3>Monitoring</h3><div class="sysflow-feat"><strong>Progress<span class="sysflow-who">Office</span></strong><ul><li>Gantt chart</li><li>Project costs</li><li>Pending approvals</li></ul></div><div class="sysflow-feat"><strong>Site monitoring<span class="sysflow-who">Site</span></strong><ul><li>Live camera feeds</li><li>Crew on site</li><li>Equipment and materials</li></ul></div><span class="sysflow-tags"><span class="sysflow-tag is-web">Web</span></span></li>
+      </ol>
+    </section>
+  </div>
+</figure>
+      <div class="proto-cta">
+        <button type="button" class="btn btn-primary" data-proto-open="proto-em">Walk Through the Flow</button>
+      </div>
+      <script type="application/json" id="proto-em">{"title": "Construction Project Management System", "modules": ["Inquiry", "Kickoff", "Purchasing", "Contracts", "On-site QC", "Approvals", "Monitoring"], "screens": [{"m": 0, "src": "../../assets/img/em-deal-apply.png", "side": {"src": "../../assets/img/em-app-deal-form.png", "label": "Manager’s phone", "from": [94.8, 90.3], "to": [0, 30], "note": "On submit"}, "role": "Sales → Manager", "text": "Sales creates an inquiry and submits it. The manager sees the request right away in the mobile app and can approve or reject it on the spot.", "hot": null, "act": "", "phone": false}, {"m": 1, "src": "../../assets/img/em-open-form.png", "role": "Project manager", "text": "Once the job is won, the PM opens the project, chooses “Reuse project code” to carry over the inquiry’s code, fills in contract details, builds the team roster from staff cards and submits.", "hot": null, "act": "", "phone": false}, {"m": 2, "src": "../../assets/img/em-requisition.png", "role": "Procurement", "text": "The purchase request shows the negotiation progress for each item — from first and second rounds to award — along with the latest quotes and the winning vendor.", "hot": null, "act": "", "phone": false}, {"m": 3, "src": "../../assets/img/ct-step2.png", "role": "Procurement", "text": "When creating a contract, procurement picks the vendor and project, and details like the tax ID fill in automatically. The long form is split into five steps.", "hot": [94.3, 96.3], "act": "Next step", "phone": false}, {"m": 4, "src": "../../assets/img/em-check.jpg", "side": {"src": "../../assets/img/em-app-report.png", "label": "Site crew’s phone", "first": true, "reverse": true, "from": [92.7, 8.7], "to": [49.5, 60], "note": "On submit"}, "role": "Site crew → Project manager", "text": "Site crew take photos and submit self-inspections in the app, and the PM sees them in the system instantly.", "hot": null, "act": "", "phone": false}, {"m": 4, "src": "../../assets/img/em-site-progress.png", "role": "Project manager", "text": "In the office, the PM sees the project phase, overall progress and each work item’s completion, and can open a work item to view its inspection forms.", "hot": null, "act": "", "phone": false}, {"m": 5, "src": "../../assets/img/em-drawing-list.png", "role": "Applicant", "text": "When drawings are rejected, the category tree flags what needs resubmitting with counts and warning icons, so the applicant knows exactly what to fix.", "hot": [13.9, 21.9], "act": "View approval history", "phone": false}, {"m": 5, "src": "../../assets/img/em-drawing-history.png", "links": [{"area": [5.6, 20.4, 5.4, 3.3], "go": -1, "label": "Back to list"}], "role": "Applicant", "text": "The approval history shows which step it’s stuck at, who rejected it and why — and pending approvers can be nudged with one click.", "hot": null, "act": "", "phone": false}, {"m": 6, "src": "../../assets/img/em-dashboard.png", "role": "Office · Managers", "text": "Progress monitoring for the office: Gantt chart, project costs and pending approvals on one page, so every project’s status is clear at a glance.", "hot": null, "act": "", "phone": false}, {"m": 6, "src": "../../assets/img/em-monitor.jpg", "role": "Site · Managers", "text": "Site monitoring: switch between camera feeds from each site office and track crews on site, equipment, materials and cumulative progress. Managers can see both views.", "hot": null, "act": "", "phone": false}]}</script>
+    </div>
+  </section>
+
+  <!-- 3. 需求與解法 -->
+  <section class="highlights shots-even" id="highlights" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="highlights-title">Needs &amp; Solutions</h2>
+
+      <div class="core">
+        <p class="core-label">Site reporting</p>
+        <h3 class="core-title">App for the site, web for the office</h3>
+        <p class="highlights-lead">Site crews and office staff care about different things, so the same data gets two interfaces: the site needs fast photo reporting, and the office needs progress at a glance.</p>
+        <ol class="core-steps">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot shot-phone" src="../../assets/img/em-app-report.png" alt="App site progress report: upload photos and fill in inspection results" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>Photo reports from the site</h4>
+              <p>Site crews fill in self-inspection forms and upload photos in the app; failed items are marked in red.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/em-check.jpg" alt="Self-inspection form in a side panel, showing site photos and notes" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>Photos next to checklist items</h4>
+              <p>Open an inspection form to see site photos and notes in a side panel, without leaving the list.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/em-check-list.png" alt="Self-inspection forms listed by work item and floor with completion rates, each item marked pending, passed or failed" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">03</p>
+              <h4>Every result, item by item</h4>
+              <p>See each inspection form’s completion by work item and floor. Every item is marked pending, passed or failed, and new submissions are tagged NEW.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>Design Rationale</h4>
+          <p>Site crews need to report quickly, while the office needs the big picture. So the app focuses on photos and inspection results, and the web app handles consolidation and progress tracking — the same data, shown the way each role needs it.</p>
+        </div>
+      </div>
+
+      <div class="core">
+        <p class="core-label">Cross-site monitoring</p>
+        <h3 class="core-title">Every site office in one view</h3>
+        <p class="highlights-lead">Monitoring moves from a single project up to the company level, so managers can see every site at once. Two views — project progress and on-site monitoring — cover both schedule and site management.</p>
+        <ol class="core-steps core-steps-2">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/em-dashboard.png" alt="Progress monitoring: Gantt chart, project costs and pending approvals" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>Project progress</h4>
+              <p>Gantt chart, project costs and pending approvals on one page, so every project’s status is clear at a glance.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/em-monitor.jpg" alt="Site monitoring: site office list, camera feeds, and crew, equipment and material stats" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>On-site monitoring</h4>
+              <p>Switch between camera feeds from the site office list while tracking crews, equipment and materials.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>Design Rationale</h4>
+          <p>Each role watches different things: the office tracks progress and costs, while the site cares about crews and equipment. Splitting monitoring by context lets each role get what they need quickly.</p>
+        </div>
+      </div>
+
+      <div class="core">
+        <p class="core-label">Connected data</p>
+        <h3 class="core-title">Enter it once, reuse it everywhere</h3>
+        <p class="highlights-lead">Inquiries, kickoff and contracts share the same project and vendor data. Later forms fill in what’s already known, so users only confirm it and add what’s different.</p>
+        <ol class="core-steps">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/em-deal-minutes.png" alt="Inquiry request: inquiry details and a list of meeting notes" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>Meeting notes from day one</h4>
+              <p>Notes from every meeting are uploaded to the inquiry while the deal is still in progress.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/em-open-code.png" alt="Project kickoff: choosing to reuse the project code carried over from the inquiry" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>Project code carries over</h4>
+              <p>If the deal is won, kickoff reuses the project code; if not, the inquiry is closed.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/ct-step2.png" alt="After choosing the project and vendor, details like the tax ID fill in automatically" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">03</p>
+              <h4>Contracts pre-filled</h4>
+              <p>Pick the vendor and project, and details like the tax ID fill in automatically. Gray fields come from the system and don’t need input.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>Design Rationale</h4>
+          <p>Project codes and vendor details are used again and again across stages. Re-entering them wastes time and causes mismatches, so the project code links the whole flow — carried forward if the deal is won, closed if not — keeping data consistent.</p>
+        </div>
+      </div>
+
+
+      <div class="core">
+        <p class="core-label">Step-by-step contracts</p>
+        <h3 class="core-title">Long contracts in steps, with a preview</h3>
+        <p class="highlights-lead">Steps are arranged by contract type — from basics and project terms to clauses and signatures — so users can see their progress as they go and preview the full contract at the end.</p>
+        <ol class="core-steps">
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/ct-type.png" alt="New vendor contract: choose the contract type first" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">01</p>
+              <h4>Choose the contract type</h4>
+              <p>Users pick a contract type first, and the system sets up the matching steps.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/ct-steps.png" data-frames="../../assets/img/ct-steps1.png ../assets/img/ct-steps.png" data-clicks="40,23.2 21,23.2" alt="Step-by-step contract: a five-step bar on top with Save draft, Back and Next below; open it to see clicking the step bar to jump between sections" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">02</p>
+              <h4>One step at a time</h4>
+              <p>Click the step bar to jump to any section. Based on interview feedback, I added Save draft so users can stop halfway.</p>
+            </div>
+          </li>
+          <li class="core-step">
+            <div class="core-shots"><img class="shot" src="../../assets/img/ct-review.png" alt="Contract review: a preview of the entries in formal contract layout" loading="lazy"></div>
+            <div class="core-text">
+              <p class="core-num">03</p>
+              <h4>Preview before submitting</h4>
+              <p>Users review everything in the formal contract layout before saving, so errors are caught before submission.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="core-why">
+          <h4>Design Rationale</h4>
+          <p>Contracts are complex, and each type needs different fields. Steps adapt to the contract type, Save draft lets users finish in stages, and the final preview reduces omissions and errors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 成果與過程 -->
+  <section class="devnotes" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="results-title">Outcomes &amp; Process</h2>
+      <div class="chapter">
+        <div class="chapter-head"><h3>Design Process</h3></div>
+        <p class="chapter-lead">This was proposal-phase work: I designed both the web and app interfaces on my own, and other teammates joined only after the contract was won. Company policy kept designers from meeting clients at this stage, so the sales manager ran the interviews and brought back the requirements.</p>
+        <ol class="steps steps-4"><li><time>Requirements</time><b>Input from sales</b><p>The sales manager interviewed the client, and I mapped workflows and pain points from those notes.</p></li><li><time>Planning</time><b>Breaking down the flow</b><p>Split a project from inquiry to close-out into modules and decided which data carries forward.</p></li><li><time>Design</time><b>Proposal screens in Figma</b><p>Designed the key flows and states with one shared component set for web and app.</p></li><li><time>Alignment</time><b>Review with sales</b><p>Confirmed scope and priorities so the proposal met the client’s expectations.</p></li></ol>
+      </div>
+      <div class="chapter">
+        <div class="chapter-head"><h3>What I Brought</h3></div>
+        <p class="chapter-lead">Having designed internal systems before, I understood enterprise workflows and data management, so I could quickly grasp how a system like this works and turn complex business processes into concrete features and interfaces — including construction-specific workflows like negotiation rounds, drawing reviews, and building permit and fire code documents.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 反思 -->
+  <section class="journey" id="reflection" aria-labelledby="reflection-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="reflection-title">Reflection</h2>
+      <div class="core-why reflect-status">
+        <h4>Project Status</h4>
+        <p>I’ve since left the company and can’t follow the project’s development or rollout, so this case covers the proposal-phase design only. It hasn’t been validated in production.</p>
+      </div>
+      <p class="journey-lead">Looking back, there are two things I’d do better next time:</p>
+      <div class="lessons">
+        <ul>
+          <li><strong>Close the gap in second-hand requirements.</strong> Company policy meant I could only learn the client’s needs through the sales manager. Next time I’d prepare an interview guide and collect the client’s real forms and site photos, to design closer to the first-hand context.</li>
+          <li><strong>Design for real site conditions.</strong> Beyond a complete workflow, I’d account for spotty connections, gloved hands and bright sunlight — prioritizing offline drafts, larger tap targets and higher contrast.</li>
+        </ul>
+      </div>
+      <p class="journey-lead journey-key">A proposal can show the design thinking, but only real-world use can prove whether a product truly solves the problem.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="case-next" id="more-work">
+      <a href="customer-journey.html"><small>← Previous case</small><b>Customer Journey Platform</b></a>
+      <a href="../index.html#work" class="next"><small>→</small><b>Back to all work</b></a>
+    </nav>
+  </div>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>Let’s Talk</h2>
+      <p>Feel free to reach out about roles or collaboration.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary copy-email" data-email="teenan2464@gmail.com" aria-label="Copy email address teenan2464@gmail.com">teenan2464@gmail.com<svg class="ic-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ic-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tinaliu0924" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="toc" id="toc" aria-label="On this page">
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#overview" data-sections="overview">Overview</a></li>
+    <li><a href="#scenes" data-sections="scenes">System Flow</a></li>
+    <li><a href="#highlights" data-sections="highlights">Needs &amp; Solutions</a></li>
+    <li><a href="#results" data-sections="results">Outcomes &amp; Process</a></li>
+    <li><a href="#reflection" data-sections="reflection more-work">Reflection</a></li>
+  </ol>
+</nav>
+
+<footer class="site-footer">© 2026 Tina Liu · <a href="mailto:teenan2464@gmail.com">teenan2464@gmail.com</a></footer>
+<script src="../../assets/site.js?v=20261124131421"></script>
+  <script src="../../assets/gc.js?v=20261124131421"></script>
+</body>
+</html>

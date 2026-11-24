@@ -1109,3 +1109,10 @@ h1, h2, h3, h4,
 .chapter .kpis-gain { margin-top: 24px; }
 .kpis-gain .kpi-label { display: flex; align-items: center; gap: 8px; }
 .gain-icon { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #16A34A; }
+
+/* 中英切換、英文版 Demo 說明 */
+.lang-switch { display: inline-flex; align-items: center; height: 40px; padding: 0 6px; color: var(--ink-2, var(--ink)); font-size: var(--fs-small); font-weight: 500; text-decoration: none; }
+.lang-switch:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.demo-note { margin: 12px 0 0; color: var(--ink-3, var(--ink)); font-size: var(--fs-small); }
+/* 英文版的示範畫面改用英文字型（中文字型會把英文引號排成全形） */
+html[lang="en"] .whd-stage, html[lang="en"] .cjd-stage { font-family: "Inter", "Noto Sans TC", sans-serif; }

@@ -1,3 +1,7 @@
+// 英文版頁面（<html lang="en">）的介面文字
+const EN = document.documentElement.lang === 'en';
+const T = (zh, en) => (EN ? en : zh);
+
 // 手機版選單開關；點選連結後自動收起
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('nav');
@@ -31,9 +35,9 @@ const buildCaseToc = () => {
     items.push([sec.id, sec.querySelector('h2').textContent.split('：')[0]]);
   });
   const next = document.querySelector('.case-next');
-  if (next) { next.id ||= 'more-work'; items.push([next.id, '其他作品']); }
+  if (next) { next.id ||= 'more-work'; items.push([next.id, T('其他作品', 'More Work')]); }
   const nav = document.createElement('nav');
-  nav.className = 'toc'; nav.id = 'toc'; nav.setAttribute('aria-label', '本頁目錄');
+  nav.className = 'toc'; nav.id = 'toc'; nav.setAttribute('aria-label', T('本頁目錄', 'On this page'));
   nav.innerHTML = `<ol class="toc-list">${items.map(([id, label]) => `<li><a href="#${id}" data-sections="${id}">${label}</a></li>`).join('')}</ol>`;
   document.body.append(nav);
   return nav;
@@ -94,9 +98,9 @@ const zoomables = [...document.querySelectorAll('#highlights .phone img, #highli
 if (zoomables.length) {
   const box = document.createElement('dialog');
   box.className = 'lightbox';
-  box.innerHTML = '<img alt=""><button type="button" class="lightbox-close" aria-label="關閉">×</button>'
-    + '<button type="button" class="lightbox-nav lightbox-prev" aria-label="上一張">‹</button>'
-    + '<button type="button" class="lightbox-nav lightbox-next" aria-label="下一張">›</button>'
+  box.innerHTML = '<img alt=""><button type="button" class="lightbox-close" aria-label="' + T('關閉', 'Close') + '">×</button>'
+    + '<button type="button" class="lightbox-nav lightbox-prev" aria-label="' + T('上一張', 'Previous') + '">‹</button>'
+    + '<button type="button" class="lightbox-nav lightbox-next" aria-label="' + T('下一張', 'Next') + '">›</button>'
     + '<p class="lightbox-count" aria-live="polite"></p>';
   document.body.appendChild(box);
   const big = box.querySelector('img');
@@ -211,7 +215,7 @@ document.querySelectorAll('.copy-email').forEach((btn) => {
       t.remove();
     }
     btn.classList.toggle('copied', ok);
-    if (status) status.textContent = ok ? '已複製信箱' : `複製失敗，請手動複製：${email}`;
+    if (status) status.textContent = ok ? T('已複製信箱', 'Email copied') : T(`複製失敗，請手動複製：${email}`, `Couldn't copy — please copy manually: ${email}`);
     clearTimeout(timer);
     timer = setTimeout(() => { btn.classList.remove('copied'); if (status) status.textContent = ''; }, 2000);
   });
@@ -225,16 +229,16 @@ document.querySelectorAll('[data-proto-open]').forEach((opener) => {
   const screens = data.screens;
   const dlg = document.createElement('dialog');
   dlg.className = 'proto';
-  dlg.setAttribute('aria-label', `${data.title}流程`);
+  dlg.setAttribute('aria-label', T(`${data.title}流程`, `${data.title} flow`));
   dlg.innerHTML = `
-    <div class="proto-head"><b>${data.title}</b><small>流程</small>
-      <button type="button" class="proto-close" aria-label="關閉">×</button></div>
-    <nav class="proto-steps" aria-label="流程進度" style="--n: ${data.modules.length}"><span class="proto-fill" aria-hidden="true"></span>${data.modules.map((m, i) =>
+    <div class="proto-head"><b>${data.title}</b><small>${T('流程', 'Flow')}</small>
+      <button type="button" class="proto-close" aria-label="${T('關閉', 'Close')}">×</button></div>
+    <nav class="proto-steps" aria-label="${T('流程進度', 'Flow progress')}" style="--n: ${data.modules.length}"><span class="proto-fill" aria-hidden="true"></span>${data.modules.map((m, i) =>
       `<button type="button" data-m="${i}" aria-label="${String(i + 1).padStart(2, '0')} ${m}"><span class="proto-dot">${String(i + 1).padStart(2, '0')}</span><span class="proto-label">${m}</span></button>`).join('')}</nav>
     <div class="proto-stage"><figure class="proto-screen"><img alt=""><button type="button" class="proto-hot"></button></figure><figure class="proto-side" hidden><img alt=""><figcaption></figcaption></figure><svg class="proto-arrow" aria-hidden="true" hidden><defs><marker id="proto-arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker></defs><circle r="16"/><path class="proto-arrow-line" marker-end="url(#proto-arrowhead)"/><text></text></svg></div>
     <div class="proto-foot">
       <p class="proto-caption"><span class="proto-role"></span><span class="proto-text"></span></p>
-      <div class="proto-nav"><button type="button" class="proto-prev">上一頁</button><span class="proto-count"></span><button type="button" class="proto-next">下一頁</button></div>
+      <div class="proto-nav"><button type="button" class="proto-prev">${T('上一頁', 'Back')}</button><span class="proto-count"></span><button type="button" class="proto-next">${T('下一頁', 'Next')}</button></div>
     </div>`;
   document.body.appendChild(dlg);
   const $ = (sel) => dlg.querySelector(sel);
@@ -257,7 +261,7 @@ document.querySelectorAll('[data-proto-open]').forEach((opener) => {
     const nx = screens[i + 1];
     const hasHot = !!sc.hot && !!nx && nx.m === sc.m && nx.role === sc.role;
     hot.hidden = !hasHot;
-    if (hasHot) { hot.style.left = `${sc.hot[0]}%`; hot.style.top = `${sc.hot[1]}%`; hot.setAttribute('aria-label', `${sc.act}（下一頁）`); }
+    if (hasHot) { hot.style.left = `${sc.hot[0]}%`; hot.style.top = `${sc.hot[1]}%`; hot.setAttribute('aria-label', T(`${sc.act}（下一頁）`, `${sc.act} (next)`)); }
     // 畫面上其他可點的地方（例如切回分頁），不閃爍，滑過時顯示外框
     fig.querySelectorAll('.proto-link').forEach((el) => el.remove());
     (sc.links || []).forEach((l) => {
@@ -274,7 +278,7 @@ document.querySelectorAll('[data-proto-open]').forEach((opener) => {
     $('.proto-text').textContent = sc.text;
     $('.proto-count').textContent = `${i + 1} / ${screens.length}`;
     $('.proto-prev').disabled = i === 0;
-    $('.proto-next').textContent = i === screens.length - 1 ? '完成' : '下一頁';
+    $('.proto-next').textContent = i === screens.length - 1 ? T('完成', 'Done') : T('下一頁', 'Next');
     $('.proto-next').classList.toggle('is-cue', !hasHot && i < screens.length - 1);  // 沒有熱點的畫面，改提示按「下一頁」
     steps.forEach((b, k) => {
       if (k === sc.m) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
@@ -408,7 +412,7 @@ document.querySelectorAll('.wh-demo').forEach((fig) => {
   const scan = async (el, value, id, done = false) => {
     const [x, y] = at(el, el.offsetWidth - 40, -50);
     scanner.style.left = x + 'px'; scanner.style.top = y + 'px';
-    scanner.querySelector('.whd-sound').textContent = done ? '叮咚 ✓' : '嗶';
+    scanner.querySelector('.whd-sound').textContent = done ? T('叮咚 ✓', 'Ding-dong ✓') : T('嗶', 'Beep');
     scanner.classList.toggle('is-done', done);
     scanner.classList.add('is-on');
     await wait(380, id);
@@ -433,7 +437,7 @@ document.querySelectorAll('.wh-demo').forEach((fig) => {
     const it = field('item'), toast = $('.whd-toast');
     const [x, y] = at(it, it.offsetWidth - 40, -50);
     scanner.style.left = x + 'px'; scanner.style.top = y + 'px';
-    scanner.querySelector('.whd-sound').textContent = '嗶嗶嗶！';
+    scanner.querySelector('.whd-sound').textContent = T('嗶嗶嗶！', 'Beep beep beep!');
     scanner.classList.add('is-on', 'is-error');
     await wait(380, id);
     it.querySelector('.whd-val').textContent = '4710999990012'; it.classList.add('is-error'); toast.classList.add('is-on');
@@ -542,3 +546,12 @@ document.querySelectorAll('.cj-demo').forEach((fig) => {
   };
   new IntersectionObserver((es) => es.forEach((e) => { if (user) return; if (e.isIntersecting) { if (!fig.dataset.playing) { fig.dataset.playing = '1'; demo(); } } else { run++; delete fig.dataset.playing; cursor.style.opacity = 0; open(false); } }), { threshold: 0.4 }).observe(fig);
 });
+
+// 中英切換：停在目前看到的段落（兩種語言的段落 id 相同）
+document.querySelectorAll('.lang-switch').forEach((a) => a.addEventListener('click', () => {
+  const secs = [...document.querySelectorAll('main section[id]')];
+  const cur = secs.filter((s) => s.getBoundingClientRect().top <= innerHeight * 0.3).pop();
+  const url = new URL(a.href, location.href);
+  url.hash = cur && scrollY > 80 ? cur.id : '';
+  a.href = url.href;
+}));

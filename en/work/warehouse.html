@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warehouse Inbound &amp; Outbound System | Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261124131421">
+</head>
+<body class="case-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Tina Liu</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#medreminder">MedReminder</a>
+      <details class="menu">
+        <summary>More Work</summary>
+        <div class="menu-panel">
+          <a href="warehouse.html">Warehouse Inbound &amp; Outbound System</a>
+          <a href="customer-journey.html">Customer Journey Platform</a>
+          <a href="contract.html">Construction Project Management System</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="lang-switch" href="../../work/warehouse.html" lang="zh-Hant" hreflang="zh-Hant" aria-label="切換到中文版">中文</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Get in Touch</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 專案介紹 -->
+  <section class="project" id="overview">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← More Work</a>
+      <div class="project-grid">
+        <div class="project-text">
+          <h1 class="project-title"><span>Keeping scans uninterrupted</span>Warehouse Inbound &amp; Outbound System</h1>
+          <p class="project-lead">A warehouse system that pairs barcode printers and scanners to replace manual work and Excel. After launch, I went back to the floor and found that staff never looked at the screen while scanning — so I redesigned how focus moves between fields to keep their scanning rhythm unbroken.</p>
+          <dl class="project-meta"><div><dt>Role</dt><dd>Sole UI/UX Designer</dd></div><div><dt>Team</dt><dd>1 PM, 1 UI/UX, 2 Engineers</dd></div><div><dt>Users</dt><dd>Purchasing staff, warehouse staff</dd></div><div><dt>Timeline</dt><dd>Feb – May 2025 (3 months)</dd></div></dl>
+        </div>
+        <figure class="project-cover"><img class="shot" src="../../assets/img/wh-cover.jpg" width="2000" height="754" alt="Version 2 interface: the receiving list, receiving details and the receiving scan dialog" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 問題情境 -->
+  <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="scenes-title">The Problem</h2>
+      <p class="scenes-lead">Warehouse work used to rely on manual processes and Excel. The PM brought the request, and I talked with warehouse staff about how they actually worked, which surfaced three problems.</p>
+      <div class="scene-list">
+        <figure class="scene">
+          <div class="scene-art"><img src="../../assets/img/wh-scene-steps.jpg" width="1200" height="675" alt="A staff member at a desk flipping through a stack of paper forms with one hand and typing each entry into Excel with the other" loading="lazy"></div>
+          <figcaption><h3>Too many steps</h3><p>Managing inventory in Excel meant many steps and low efficiency.</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <div class="scene-art"><img src="../../assets/img/wh-scene-count.jpg" width="1080" height="675" alt="A warehouse worker in front of shelves, checking items one by one on a paper form on a clipboard" loading="lazy"></div>
+          <figcaption><h3>Repeated stock counts</h3><p>Even after data entry, items had to be counted again, dragging out the work.</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <div class="scene-art"><img src="../../assets/img/wh-scene-3.jpg" width="1200" height="675" alt="Two colleagues each looking at their own Excel sheet, labeled 128? and 96? — the numbers don’t match" loading="lazy"></div>
+          <figcaption><h3>Data out of sync</h3><p>Systems weren’t connected, so data couldn’t sync with finance in real time and often didn’t match.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 設計與迭代 -->
+  <section class="highlights" id="highlights" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="highlights-title">Design &amp; Iteration</h2>
+
+      <div class="core">
+        <p class="core-label">Version 1 | Replacing Excel</p>
+        <h3 class="core-title">Barcode scanning instead of manual entry</h3>
+        <p class="highlights-lead">Version 1 paired barcode printers and scanners so staff could scan instead of typing into Excel, <strong>eliminating typos from manual entry</strong>. But after scanning an item, they still had to click the location field before scanning the location barcode.</p>
+        <figure class="wh-demo" data-version="1" aria-label="Version 1 demo: every step requires clicking a field with the mouse">
+          <div class="whd-frame"><div class="whd-stage"><span class="whd-count">Mouse clicks: <b>0</b></span>
+            <div class="whd-dialog">
+              <div class="whd-head">Receiving</div>
+              <div class="whd-scanrow"><div class="whd-input" data-field="item"><span class="whd-val"></span><span class="whd-ph">Scan item barcode</span></div><span class="whd-btn">Enter</span></div>
+              <p class="whd-hint" aria-hidden="true">All received — scan the location</p>
+              <p class="whd-toast" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5v.01"/></svg>This item isn’t on the receiving list. Please check and scan again.</p>
+              <div class="whd-table">
+                <div class="whd-tr whd-th"><span>Item</span><span>Received</span><span>Progress</span><span>Location<em>*</em></span></div>
+                <div class="whd-tr" data-row="0"><span><small>PO2025022000001</small>Keyboard &amp; mouse set</span><span class="whd-qty"><b>0</b>/2</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc0"><span class="whd-val"></span><span class="whd-ph">Scan location</span></div></span></div>
+                <div class="whd-tr" data-row="1"><span><small>PO2025022000002</small>1TB SSD</span><span class="whd-qty"><b>0</b>/1</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc1"><span class="whd-val"></span><span class="whd-ph">Scan location</span></div></span></div>
+              </div>
+              <div class="whd-foot"><span>Received on 2025-02-22</span><span class="whd-acts"><i>Cancel</i><i>Save draft</i><i class="whd-done">Complete</i></span></div>
+            </div>
+            <span class="whd-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5h6.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span class="whd-scanner" aria-hidden="true"><img src="../../assets/img/wh-scanner.png" width="56" height="56" alt=""><b class="whd-sound">Beep</b></span>
+          </div></div>
+          <figcaption class="whd-meta"><ol class="whd-steps"><li><span>01</span>Click item field, scan</li><li><span>02</span>Click location field, scan</li><li><span>03</span>Click back, scan next</li></ol></figcaption>
+        </figure>
+      </div>
+
+      <div class="core">
+        <p class="core-label">Version 2 | Post-launch iteration</p>
+        <h3 class="core-title">Letting the cursor follow the workflow</h3>
+        <p class="highlights-lead">Version 1 replaced Excel, but when I observed on site, I found that staff <strong>barely looked up at the screen</strong> while scanning. If the cursor sat in the wrong field, they had to switch it by hand — and once the rhythm broke, input errors and missed scans went up noticeably.</p>
+        <figure class="wh-demo" data-version="2" aria-label="Version 2 demo: scanned data fills in automatically and the cursor jumps to the next field">
+          <div class="whd-frame"><div class="whd-stage"><span class="whd-count">Mouse clicks: <b>0</b></span>
+            <div class="whd-dialog">
+              <div class="whd-head">Receiving</div>
+              <div class="whd-scanrow"><div class="whd-input" data-field="item"><span class="whd-val"></span><span class="whd-ph">Scan item barcode</span></div><span class="whd-btn">Enter</span></div>
+              <p class="whd-hint" aria-hidden="true">All received — scan the location</p>
+              <p class="whd-toast" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5v.01"/></svg>This item isn’t on the receiving list. Please check and scan again.</p>
+              <div class="whd-table">
+                <div class="whd-tr whd-th"><span>Item</span><span>Received</span><span>Progress</span><span>Location<em>*</em></span></div>
+                <div class="whd-tr" data-row="0"><span><small>PO2025022000001</small>Keyboard &amp; mouse set</span><span class="whd-qty"><b>0</b>/2</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc0"><span class="whd-val"></span><span class="whd-ph">Scan location</span></div></span></div>
+                <div class="whd-tr" data-row="1"><span><small>PO2025022000002</small>1TB SSD</span><span class="whd-qty"><b>0</b>/1</span><span class="whd-prog"><i></i><u>0%</u></span><span><div class="whd-input" data-field="loc1"><span class="whd-val"></span><span class="whd-ph">Scan location</span></div></span></div>
+              </div>
+              <div class="whd-foot"><span>Received on 2025-02-22</span><span class="whd-acts"><i>Cancel</i><i>Save draft</i><i class="whd-done">Complete</i></span></div>
+            </div>
+            <span class="whd-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5h6.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            <span class="whd-scanner" aria-hidden="true"><img src="../../assets/img/wh-scanner.png" width="56" height="56" alt=""><b class="whd-sound">Beep</b></span>
+          </div></div>
+          <figcaption class="whd-meta"><ol class="whd-steps"><li><span>01</span>Scan, count updates</li><li><span>02</span>Off-list item alert</li><li><span>03</span>At 100%, go to location</li><li><span>04</span>Back to items</li></ol></figcaption>
+        </figure>
+        <div class="core-why">
+          <h4>Design Rationale</h4>
+          <p>The system was digital, but the workflow still had to fit how people worked on the floor, so I improved three areas:</p>
+          <ul class="why-list">
+            <li><strong>Workflow:</strong> Focus changes follow the rhythm of holding a scanner and checking goods by eye, cutting down on switching between hands, eyes and screen.</li>
+            <li><strong>Real-time feedback:</strong> Different sounds and colors distinguish three states — a normal scan, all units received (ready to scan the location), and an off-list item — so staff know where they are without looking at the screen.</li>
+            <li><strong>Scanning rules:</strong> Items can have multiple units and be scanned in any order, so I worked through the logic with engineers to balance floor efficiency with technical feasibility.</li>
+          </ul>
+        </div>
+        <div class="core-why core-logic">
+          <h4>Logic Rules</h4>
+          <ol class="logic-list">
+            <li><span class="logic-if">Receiving dialog opens</span><span class="logic-then">Focus starts in the item barcode field — no click needed</span></li>
+            <li><span class="logic-if">Item barcode scanned</span><span class="logic-then">The matching item’s received count goes up by 1 and progress updates instantly</span></li>
+            <li><span class="logic-if">Items scanned in any order</span><span class="logic-then">As long as they’re on the same receiving list, switching from item A to item B mid-way adds to B without affecting A’s count</span></li>
+            <li><span class="logic-if">Item not on the receiving list</span><span class="logic-then">The field turns red and a message appears, with a repeating alert sound unlike the success sound; the count doesn’t change</span></li>
+            <li><span class="logic-if">Received = expected (100%)</span><span class="logic-then">A distinct completion sound signals it’s time to scan the location; the cursor jumps to that item’s location field and shows “Scan the location”</span></li>
+            <li><span class="logic-if">Location barcode scanned</span><span class="logic-then">The location fills in and the cursor returns to the item barcode field</span></li>
+            <li><span class="logic-if">All items at 100% with locations filled</span><span class="logic-then">Only then is the “Complete” button enabled</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 成果與過程 -->
+  <section class="devnotes" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="results-title">Outcomes &amp; Process</h2>
+      <div class="kpis"><div class="kpi"><p class="kpi-label">Task time</p><b>−20<small>%</small></b><span>Average scanning time per task: 16 s → 13 s</span></div><div class="kpi"><p class="kpi-label">Manual field switches</p><b>≈0</b><span>No more switching fields by hand while scanning</span></div><div class="kpi"><p class="kpi-label">User satisfaction</p><b>↑<small></small></b><span>Warehouse staff found it more intuitive — they could finish entry without glancing at the screen</span></div></div>
+<p class="kpi-note">* Based on 3 warehouse staff using both versions, comparing average task time. Every item saves the clicks spent switching fields, so the more items, the more time saved.</p>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">01</span><h3>Design Process</h3></div>
+        <ol class="steps steps-4"><li><time>Research</time><b>Understanding the context</b><p>After the PM raised the need, I asked warehouse staff how they actually worked and identified too many steps, repeated counts and out-of-sync data.</p></li><li><time>Design</time><b>Version 1</b><p>Paired barcode printers and scanners so scanning replaced typing, eliminating input errors and giving real-time inventory visibility.</p></li><li><time>After launch</time><b>Back on the floor</b><p>Saw that staff didn’t look at the screen while scanning, and a cursor in the wrong field broke their rhythm.</p></li><li><time>Iteration</time><b>Redesigning focus</b><p>After each scan, the cursor jumps to the next field automatically, so continuous scanning isn’t interrupted.</p></li></ol>
+      </div>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">02</span><h3>Impact</h3></div>
+        <ol class="findings principles"><li class="finding"><span class="principle-num">1</span><b>Warehouse staff</b><p>More intuitive to use — entry gets done without glancing at the screen.</p></li><li class="finding"><span class="principle-num">2</span><b>Purchasing &amp; management</b><p>More timely, reliable data for tracking inventory faster.</p></li><li class="finding"><span class="principle-num">3</span><b>Finance</b><p>Purchasing and finance see the same data in real time, with less back-and-forth.</p></li></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 反思 -->
+  <section class="journey" id="reflection" aria-labelledby="reflection-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="reflection-title">Reflection</h2>
+      <p class="journey-lead">This project taught me that launching a system doesn’t mean the design is done. Looking back, two lessons stood out:</p>
+      <div class="lessons">
+        <ul>
+          <li><strong>The real problems only show up on site.</strong> Version 1 had already replaced Excel, but it wasn’t until I watched staff at work that I saw they barely looked at the screen while scanning. Even after digitizing, whether a workflow fits the floor still has to be tested in context.</li>
+          <li><strong>Feedback should follow the user’s attention.</strong> Their eyes were on the goods, so I used sound and color to signal scan status and reduce how often they had to look up.</li>
+        </ul>
+      </div>
+      <p class="journey-lead journey-key">A good system doesn’t just digitize a process — it lets people focus on the work in their hands.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="case-next" id="more-work">
+      <a href="../index.html#medreminder"><small>← Featured project</small><b>MedReminder</b></a>
+      <a href="customer-journey.html" class="next"><small>Next case →</small><b>Customer Journey Platform</b></a>
+    </nav>
+  </div>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>Let’s Talk</h2>
+      <p>Feel free to reach out about roles or collaboration.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary copy-email" data-email="teenan2464@gmail.com" aria-label="Copy email address teenan2464@gmail.com">teenan2464@gmail.com<svg class="ic-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ic-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tinaliu0924" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="toc" id="toc" aria-label="On this page">
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#overview" data-sections="overview">Overview</a></li>
+    <li><a href="#scenes" data-sections="scenes">The Problem</a></li>
+    <li><a href="#highlights" data-sections="highlights">Design &amp; Iteration</a></li>
+    <li><a href="#results" data-sections="results">Outcomes &amp; Process</a></li>
+    <li><a href="#reflection" data-sections="reflection more-work">Reflection</a></li>
+  </ol>
+</nav>
+
+<footer class="site-footer">© 2026 Tina Liu · <a href="mailto:teenan2464@gmail.com">teenan2464@gmail.com</a></footer>
+<script src="../../assets/site.js?v=20261124131421"></script>
+  <script src="../../assets/gc.js?v=20261124131421"></script>
+</body>
+</html>

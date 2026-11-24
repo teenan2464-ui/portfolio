@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Journey Platform | Tina Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261124131421">
+</head>
+<body class="case-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">Tina Liu</a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#medreminder">MedReminder</a>
+      <details class="menu">
+        <summary>More Work</summary>
+        <div class="menu-panel">
+          <a href="warehouse.html">Warehouse Inbound &amp; Outbound System</a>
+          <a href="customer-journey.html">Customer Journey Platform</a>
+          <a href="contract.html">Construction Project Management System</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="lang-switch" href="../../work/customer-journey.html" lang="zh-Hant" hreflang="zh-Hant" aria-label="切換到中文版">中文</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Get in Touch</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. 專案介紹 -->
+  <section class="project" id="overview">
+    <div class="wrap">
+      <a class="back" href="../index.html#work">← More Work</a>
+      <div class="project-grid">
+        <div class="project-text">
+          <h1 class="project-title"><span>Tracking setup without the marketing jargon</span>Customer Journey Platform</h1>
+          <p class="project-lead">A marketing automation platform connecting email, SMS, landing pages and social media. I took over the redesign mid-project, reviewed the problems in version 1 and redid the user research — turning a tracking feature only marketing experts could configure into a flow anyone can understand, with results visible right away.</p>
+          <dl class="project-meta"><div><dt>Role</dt><dd>UI/UX Designer (Redesign Lead)</dd></div><div><dt>Team</dt><dd>1 PM, 2 UI/UX, 3 Engineers</dd></div><div><dt>Users</dt><dd>Ad sales reps, marketers</dd></div><div><dt>Timeline</dt><dd>May – Aug 2022 (3 months)</dd></div></dl>
+        </div>
+        <figure class="project-cover"><img class="shot" src="../../assets/img/cj-hero-indigo.jpg" width="1920" height="1200" alt="Customer Journey Platform: the redesigned trigger settings and the customer journey flow editor" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 問題情境 -->
+  <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="scenes-title">The Problem</h2>
+      <p class="scenes-lead">I interviewed ad sales reps, tried competing products myself, and ran usability tests with a prototype. The problems clustered around setting up the tracking feature.</p>
+      <p class="scene-journey-intro">I asked 3 users to try the version 1 design and complete one task — “trigger tracking when the visitor scrolls 50% down the page” — and recorded what they did and how they felt at each step:</p>
+      <figure class="scene-journey"><img class="shot" src="../../assets/img/cj-journey-before.png" width="1508" height="644" alt="User journey map before the redesign for setting up tracking at 50% scroll depth; sentiment is lowest at the “choose logic” step" loading="lazy"><figcaption>User journey before the redesign (map in Chinese): “Choose logic” was the most frustrating step, and the one where users spent the most time.</figcaption></figure>
+      <div class="scene-list is-text">
+        <figure class="scene">
+          <figcaption><h3><span class="pain-icon" aria-hidden="true">!</span>Too complex</h3><p>Setting it up correctly required marketing knowledge, so most users struggled.</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <figcaption><h3><span class="pain-icon" aria-hidden="true">!</span>Unclear guidance</h3><p>Text-only descriptions couldn’t show what actually happens on the page.</p></figcaption>
+        </figure>
+        <figure class="scene">
+          <figcaption><h3><span class="pain-icon" aria-hidden="true">!</span>No instant feedback</h3><p>Users couldn’t confirm the result right away, which led to mistakes.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 需求與解法 -->
+  <section class="highlights" id="highlights" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="highlights-title">Needs &amp; Solutions</h2>
+
+      <div class="core">
+        <p class="core-label">Tracking redesign</p>
+        <h3 class="core-title">See the result while you set it up</h3>
+        <p class="highlights-lead">The redesign focused on the parameter settings in the tracking feature, with three main changes.</p>
+        <div class="cj-compare">
+          <figure class="cj-before">
+            <p class="cj-tag">Before</p>
+            <img class="shot" src="../../assets/img/cj-before.png" width="1680" height="990" alt="Before: type, logic (greater than, equal to, less than) and value set separately, with text-only guidance" loading="lazy">
+            <figcaption>Users had to pick “greater than, equal to or less than” themselves and type values by hand — and still couldn’t see the effect.</figcaption>
+          </figure>
+          <figure class="cj-demo" aria-label="After: choose a scroll depth and the preview on the right shows the trigger point instantly">
+            <p class="cj-tag is-after">After</p>
+            <div class="cjd-frame"><div class="cjd-stage">
+              <div class="cjd-card">
+                <div class="cjd-head">Trigger settings</div>
+                <div class="cjd-body">
+                  <div class="cjd-form">
+                    <div class="cjd-row"><span class="cjd-lab">Event type</span><span class="cjd-sel">Scroll<i></i></span></div>
+                    <div class="cjd-group"><p class="cjd-legend">Parameters</p>
+                      <div class="cjd-row"><span class="cjd-lab">Scroll depth</span>
+                        <div class="cjd-dd"><button type="button" class="cjd-sel cjd-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Scroll depth percentage"><span class="cjd-value">0%</span><i></i></button>
+                          <ul class="cjd-list" role="listbox" hidden><li role="option" data-v="0">0%</li><li role="option" data-v="10">10%</li><li role="option" data-v="20">20%</li><li role="option" data-v="30">30%</li><li role="option" data-v="40">40%</li><li role="option" data-v="50">50%</li><li role="option" data-v="60">60%</li><li role="option" data-v="70">70%</li><li role="option" data-v="80">80%</li><li role="option" data-v="90">90%</li><li role="option" data-v="100">100%</li></ul></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cjd-preview"><p class="cjd-legend">Preview</p>
+                    <div class="cjd-browser"><div class="cjd-bar"><i></i><i></i><i></i></div><div class="cjd-view"><div class="cjd-page"><span>0%</span><span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>50%</span><span>60%</span><span>70%</span><span>80%</span><span>90%</span><span>100%</span><div class="cjd-line"><b>Trigger line</b></div></div></div><span class="cjd-thumb"></span></div>
+                  </div>
+                </div>
+                <div class="cjd-foot"><i>Cancel</i><i class="cjd-save">Save</i></div>
+              </div>
+              <span class="cjd-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5h6.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+            </div></div>
+            <figcaption>Try it: pick a scroll depth and the preview on the right scrolls to the trigger point.</figcaption>
+          </figure>
+        </div>
+        <div class="core-why">
+          <h4>Design Rationale</h4>
+          <p>To address the three pain points from the interviews, I changed how parameters are set in three ways:</p>
+          <ul class="why-list">
+            <li><strong>Simpler flow:</strong> Removed the “logic” step — users just pick a scroll depth, so no marketing knowledge is needed.</li>
+            <li><strong>Interactive preview instead of text:</strong> A live preview shows where tracking will trigger, so users understand the result as they set it.</li>
+            <li><strong>Dropdown instead of free input:</strong> Typing values one by one was tedious and error-prone; a dropdown cuts both errors and time.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 成果與過程 -->
+  <section class="devnotes" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="results-title">Outcomes &amp; Process</h2>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">01</span><h3>Design Process</h3></div>
+        <figure class="cj-timeline"><img class="shot" src="../../assets/img/cj-timeline.png" width="1384" height="632" alt="Project timeline: design began in March, I took over UI/UX at the end of April, completed version 2 after new research, and development started in August" loading="lazy"><figcaption>When I took over at the end of April, version 1 was already done. I redid the research, then designed version 2.</figcaption></figure>
+        <ol class="steps steps-4"><li><time>Takeover</time><b>Reviewing version 1</b><p>Another designer had led the early phase. I first reviewed the problems in version 1, then set the redesign direction.</p></li><li><time>Research</time><b>Interviews &amp; competitor analysis</b><p>Interviewed our in-house ad sales reps and tried competing products myself.</p></li><li><time>Design</time><b>Mockups &amp; prototype</b><p>Defined the UI style and built mockups and a prototype in Figma.</p></li><li><time>Validation</time><b>Before-and-after usability tests</b><p>Compared setup time and user sentiment before and after, and aligned specs with front-end and QA.</p></li></ol>
+      </div>
+      <div class="chapter">
+        <div class="chapter-head"><span class="num">02</span><h3>Revised User Journey</h3></div>
+        <p class="chapter-lead">The same 3 users completed the same task: steps dropped from 4 to 3, and time fell from about 3 minutes to 1. Compared with the version 1 journey above, seeing the preview while choosing a value became the most positive moment.</p>
+        <figure class="cj-journey-after"><img class="shot" src="../../assets/img/cj-journey-after.png" width="1507" height="684" alt="User journey after the redesign: 3 steps in about 1 minute, with sentiment peaking when users see the preview" loading="lazy"><figcaption>User journey after the redesign (map in Chinese)</figcaption></figure>
+        <div class="kpis kpis-gain"><div class="kpi"><p class="kpi-label"><span class="gain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Setup time</p><b>3→1<small>min</small></b><span>Time to complete tracking setup</span></div><div class="kpi"><p class="kpi-label"><span class="gain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>User satisfaction</p><b>↑<small></small></b><span>Clearly more positive moments across the user journey</span></div><div class="kpi"><p class="kpi-label"><span class="gain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Input errors</p><b>↓<small></small></b><span>Fewer input errors after switching to a dropdown</span></div></div>
+        <p class="kpi-note">* Before and after the redesign, 3 users each completed the same task — triggering tracking at 50% scroll depth — and I compared completion time and experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 反思 -->
+  <section class="journey" id="reflection" aria-labelledby="reflection-title">
+    <div class="wrap">
+      <h2 class="marker-title" id="reflection-title">Reflection</h2>
+      <p class="journey-lead">I joined this redesign mid-project. Looking back, two things stood out:</p>
+      <div class="lessons">
+        <ul>
+          <li><strong>Review the problems before choosing a direction.</strong> The early design was already done, so instead of starting over, I mapped the existing problems and ran user research. Once it was clear the pain points centered on tracking, I narrowed the redesign to parameter settings — solving the core problem first within a tight timeline.</li>
+          <li><strong>Showing the result beats explaining it.</strong> Version 1 used text to explain “greater than, equal to, less than,” and users still found it confusing. Once a live preview showed the trigger point, setup time dropped from about 3 minutes to 1, and the link between action and result became intuitive.</li>
+        </ul>
+      </div>
+      <p class="journey-lead journey-key">A good settings interface doesn’t make users learn the rules — it lets them see the result at a glance.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="case-next" id="more-work">
+      <a href="warehouse.html"><small>← Previous case</small><b>Warehouse Inbound &amp; Outbound System</b></a>
+      <a href="contract.html" class="next"><small>Next case →</small><b>Construction Project Management System</b></a>
+    </nav>
+  </div>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>Let’s Talk</h2>
+      <p>Feel free to reach out about roles or collaboration.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary copy-email" data-email="teenan2464@gmail.com" aria-label="Copy email address teenan2464@gmail.com">teenan2464@gmail.com<svg class="ic-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ic-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tinaliu0924" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="toc" id="toc" aria-label="On this page">
+  <ol class="toc-list" id="toc-list">
+    <li><a href="#overview" data-sections="overview">Overview</a></li>
+    <li><a href="#scenes" data-sections="scenes">The Problem</a></li>
+    <li><a href="#highlights" data-sections="highlights">Needs &amp; Solutions</a></li>
+    <li><a href="#results" data-sections="results">Outcomes &amp; Process</a></li>
+    <li><a href="#reflection" data-sections="reflection more-work">Reflection</a></li>
+  </ol>
+</nav>
+
+<footer class="site-footer">© 2026 Tina Liu · <a href="mailto:teenan2464@gmail.com">teenan2464@gmail.com</a></footer>
+<script src="../../assets/site.js?v=20261124131421"></script>
+  <script src="../../assets/gc.js?v=20261124131421"></script>
+</body>
+</html>
